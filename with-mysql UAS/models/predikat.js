@@ -17,7 +17,7 @@ module.exports = {
     },
     getPredikatById:(id,result) =>{
         try {
-            sql.query(`SELECT anggota.id, anggota.nama, predikat.kdTk, predikat.tahun, predikat.predikat, tingkatankader.keterangan FROM anggota, predikat, tingkatankader WHERE anggota.id=${id} AND predikat.id=${id} AND predikat.kdTk=tingkatankader.kdTk;`,
+            sql.query(`SELECT anggota.id, anggota.nama, predikat.kdTk, predikat.tahun, predikat.predikat, tingkatankader.kdTk, tingkatankader.keterangan FROM anggota, predikat, tingkatankader WHERE anggota.id=${id} AND predikat.id=${id} AND predikat.kdTk=tingkatankader.kdTk;`,
             (err,res) =>
             {
                 result(null,res)
