@@ -93,24 +93,5 @@ module.exports = {
                    res.send({message: `Anggota sudah di hapus`});
                }            
         });
-    },
-    getPredikatById : (req,res)=>{
-        Predikat.getPredikatById(req.params.id,(err,data)=>{
-            if (err) {
-                if (err.kind === 'not_found') {
-                    res.status(404).send({
-                        message : `Anggota dengan Id ${req.params.id} tidak di temukan`
-                    });
-                }
-                else{
-                    res.status(500).send({
-                        predikat : []
-                    });
-                }
-               }
-               else{
-                   res.send(data);
-               }            
-        });
     }
 }

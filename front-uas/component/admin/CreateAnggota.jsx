@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useRouter } from "next/router";
 
 
 const CreateAnggota = () => {
@@ -7,6 +8,7 @@ const CreateAnggota = () => {
     const [nama, setNama] = useState('');
     const [ttg, setTtg] = useState('');
     const [asal, setAsal] = useState('');
+    const router=useRouter();
 
     async function submitHandler(e) {
         e.preventDefault()
@@ -18,6 +20,7 @@ const CreateAnggota = () => {
                     ttg,
                     asal,
                 })
+                router.push("http://localhost:3000/admin/dataanggota")
                 .then(response => {
                     console.log(response)
                 });

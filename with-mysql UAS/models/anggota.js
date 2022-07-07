@@ -78,18 +78,5 @@ module.exports = {
             console.log("deleted anggota with ID : ",id);
             result(null,res);
         });
-    },
-    getPredikatById:(id,result) =>{
-        try {
-            sql.query(`SELECT tingkatankader.kdTk, tingkatankader.keterangan,predikat.tahun,predikat.penyelenggara,predikat.predikat 
-            FROM anggota,tingkatankader,predikat
-            WHERE anggota.id=${id} and predikat.id=${id} and predikat.kdTk=tingkatankader.kdTk`,(err,res) =>
-            {
-                result(null,res)
-            }
-            );
-        } catch (error) {
-            result(error,null)
-        }
     }
 }

@@ -13,10 +13,10 @@ routerAnggota.route('/anggota/:id')
     .delete(controllerAnggota.delete)
     .get(controllerAnggota.getAnggotaById)
 
-routerAnggota.route('/anggota/predikat/:id')
-    .get(controllerAnggota.getPredikatById)
-
 routerAnggota.route('/predikat')
     .get(controllerPredikat.getPredikat)
+
+routerAnggota.route('/predikat/:id')
+    .get(controllerPredikat.getPredikatById)
 
 module.exports = routerAnggota

@@ -21,10 +21,9 @@ const DataAnggota = ({data}) => {
         } catch (error) {
             console.log({message: error.message});
         }
-        router.push('/admin/dataanggota')
+        router.push('/admin/dataanggota/')
     }
 
-    
 
     return (
         <>

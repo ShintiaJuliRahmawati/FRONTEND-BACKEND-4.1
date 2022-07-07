@@ -2,10 +2,10 @@ import Link from "next/link";
 const Nav = () => {
     return(
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light  p-3 mb-2 bg-success text-white>.bg-success">
-            <div className="container-fluid">
-                <a className="navbar-brand" href="#">
-                    Dasboard
+            <nav className="navbar navbar-expand-lg navbar-light  p-3 mb-2 bg-light text-white>.bg-light">
+            <div className="container-fluid" style={{backgroundColor:"#0C4C31"}}>
+                <a className="navbar-brand " style={{color:"white"}} href="#">
+                    Home
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
@@ -13,32 +13,16 @@ const Nav = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                        <Link href="/"><a className="nav-link active" aria-current="page" href="#">Home</a></Link>
+                        <Link href="/"><a className="nav-link active" aria-current="page" href="#" style={{color:"white"}}>Profil</a></Link>
+                    </li>
+                    <li className="nav-item" >
+                        <Link href="/eventstate"><a className="nav-link" style={{color:"white"}}>Form Pendaftaran</a></Link> 
                     </li>
                     <li className="nav-item">
-                        <Link href="/eventstate"><a className="nav-link">Eventstate</a></Link> 
-                    </li>
-                    <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Mahasiswa
-                    </a>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <Link href={{
-                            pathname: "/user/data_mahasiswa",
-                            query: 
-                            {id : '12345' ,
-                             nama: 'Shintia Juli Rahmawati'}
-                            }}>
-                        <li><a className="dropdown-item" href="#">Data Mahasiswa</a></li>
-                        </Link>
-                        <Link href="/user/akademik">
-                        <li><a className="dropdown-item" href="#">Akademik</a></li>
-                        </Link>
-                        <li><a className="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
+                        <Link href="/user/anggota"><a className="nav-link" style={{color:"white"}}>Anggota</a></Link> 
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true">Disabled</a>
+                    <a className="nav-link disabled" href="#" tabIndex={-1} aria-disabled="true" style={{color:"white"}}>Disabled</a>
                     </li>
                 </ul>
                 <form className="d-flex">
