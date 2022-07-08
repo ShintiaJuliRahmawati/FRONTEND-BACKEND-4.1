@@ -52,20 +52,11 @@ const SideBars = ({ children }) => {
                                             </a>
                                         </li>
                                         </Link>
-                                        <Link href="/admin/datapredikat">
-                                        <li className="w-100">
-                                            <a href="#" className="nav-link px-0 text-white"> 
-                                            <span className="d-none d-sm-inline ">
-                                                Predikat Nilai
-                                                </span> 
-                                            </a>
-                                        </li>
-                                        </Link>
                                         <Link href="/admin/allpredikat">
                                         <li className="w-100">
                                             <a href="#" className="nav-link px-0 text-white"> 
                                             <span className="d-none d-sm-inline ">
-                                                Koleksi Data Anggota
+                                                Koleksi Data Predikat
                                                 </span> 
                                             </a>
                                         </li>

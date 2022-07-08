@@ -19,4 +19,5 @@ routerAnggota.route('/predikat')
 routerAnggota.route('/predikat/:id')
     .get(controllerPredikat.getPredikatById)
 
+
 module.exports = routerAnggota

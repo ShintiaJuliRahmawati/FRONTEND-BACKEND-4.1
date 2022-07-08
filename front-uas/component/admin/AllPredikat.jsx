@@ -17,7 +17,7 @@ const AllPredikat = ({data}) => {
             if (response.data.message) {
                 setMessage(response.data.message);
             }
-            alert(`Anggota dengan ID ${id} telah dihapus`)
+            alert(`Predikat dengan ID ${id} telah dihapus`)
         } catch (error) {
             console.log({message: error.message});
         }
@@ -30,28 +30,29 @@ const AllPredikat = ({data}) => {
         <LayoutAdmin>
             <div className="container mt-3">
                 <h2>Predikat Nilai</h2>
+                <PredikatById/> 
                  <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>kdTk</th>
-                            <th>tahun</th>
-                            <th>penyelenggara</th>
+                            <th>KdTk</th>
+                            <th>Tahun</th>
+                            <th>Penyelenggara</th>
                         </tr>
                     </thead>
                     <tbody>
                             {data.map((pdt,idx)=>(
                                 <tr key ={idx}>
                                     <td>{pdt.id}</td>
-                                    <td>{pdt.kdtk}</td>
+                                    <td>{pdt.kdTk}</td>
                                     <td>{pdt.tahun}</td>
                                     <td>{pdt.peyelenggara}</td>
                                     <td>
                                         <Link href={`/admin/updateanggota?id=${pdt.id}
                                         &nama${pdt.id}
-                                        &ttg${pdt.kdtk}f
+                                        &ttg${pdt.kdTk}f
                                         &asal${pdt.tahun}
-                                        &penyelenggara${pdt.penyelenggara}
+                                        &penyelenggara${pdt.peyelenggara}
                                         `}>
                                         
                                             <a class="btn btn-outline-success" role="button">Edit</a>

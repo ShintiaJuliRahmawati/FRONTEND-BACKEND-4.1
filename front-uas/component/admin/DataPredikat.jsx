@@ -1,5 +1,5 @@
 import LayoutAdmin from "./LayoutAdmin";
-import PredikatById from "./PredikatById";
+import AllPredikatById from "./AllPredikatById";
 import Router, {useRouter} from "next/router";
 import { useState } from "react";
 import Link from "next/link";
@@ -15,7 +15,7 @@ const DataPredikat = ({data}) => {
         <LayoutAdmin>
             <div className="container mt-3">
                 <h2>Data Predikat Nilai</h2>
-                <PredikatById/> 
+                <AllPredikatById/> 
                  <table class="table table-hover">
                     <thead>
                         <tr>

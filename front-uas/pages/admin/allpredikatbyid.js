@@ -14,9 +14,9 @@ const allpredikatbyid =({data}) =>{
 export async function getServerSideProps({query}) {
     const id = query.id;
     
-    let url = 'http://localhost:5000/anggota'
+    let url = 'http://localhost:5000/predikat'
     if (typeof id === 'string') {
-        url = `http://localhost:5000/anggota/${id}`
+        url = `http://localhost:5000/predikat/${id}`
     }
     
     const res = await fetch(url)

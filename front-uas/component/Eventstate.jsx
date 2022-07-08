@@ -13,6 +13,7 @@ const Evenstate = () => {
                 <div className="col-5">
                     <h3>FORM PENDAFTARAN</h3>
                     <h3>Anggota IPNU IPPNU</h3> <hr />
+                
                     <div className="md-2">
                         <label htmlFor="nama">Nama :</label>
                         <input className="form-control" type="text" name="nama" id="nama" value={nama} onChange = {(e)=>setNama(e.target.value)}/>
